@@ -1,16 +1,16 @@
 
-# AWS Wazuh SOC Lab
+**AWS Wazuh SOC Lab**
 
-## Project Overview
+** Project Overview**
 
 This project demonstrates the implementation of a cloud-based Security Operations Center (SOC) lab using AWS and Wazuh SIEM. The environment was designed to simulate real-world security monitoring, attack detection, and incident analysis workflows used by SOC analysts and cybersecurity teams.
 
-The lab consists of:
+**The lab consists of:**
 - Wazuh SOC Server
 - Ubuntu Victim Machine
 - Kali Linux Attacker Machine
 
-The project focuses on detecting:
+**The project focuses on detecting:**
 - SSH brute-force attacks
 - Authentication failures
 - Suspicious login activity
@@ -19,7 +19,7 @@ The project focuses on detecting:
 
 ---
 
-# Technologies Used
+ **Technologies Used**
 
 - AWS EC2
 - AWS VPC
@@ -35,7 +35,7 @@ The project focuses on detecting:
 
 ---
 
-# Lab Architecture
+ **Lab Architecture**
 
 Kali Linux Attacker → Ubuntu Victim Server → Wazuh SOC Server
 
@@ -45,24 +45,24 @@ Kali Linux Attacker → Ubuntu Victim Server → Wazuh SOC Server
 
 ---
 
-# AWS Infrastructure Setup
+ **AWS Infrastructure Setup**
 
 The environment was deployed inside a custom AWS VPC using EC2 instances and security groups.
 
-## Wazuh SOC Server
+ **Wazuh SOC Server**
 Configured with:
 - SSH access
 - HTTPS dashboard access
 - Wazuh agent communication ports
 - API access
 
-## Ubuntu Victim Server
+ **Ubuntu Victim Server**
 Configured as:
 - Monitored endpoint
 - SSH target for attack simulation
 - Wazuh agent endpoint
 
-## Kali Linux Attacker
+ **Kali Linux Attacker**
 Configured for:
 - SSH brute-force simulation
 - Network reconnaissance
@@ -82,19 +82,19 @@ Wazuh successfully detected:
 - Successful authentication after repeated failures
 - PAM authentication alerts
 
-### MITRE ATT&CK Techniques
+ **MITRE ATT&CK Techniques**
 - T1110 — Brute Force
 - T1021.004 — SSH
 
 ---
 
-# 2. Network Reconnaissance
+** 2. Network Reconnaissance**
 
 Nmap scans were performed against the Ubuntu victim server to simulate reconnaissance activity.
 Example:
 nmap -sS -Pn <victim-ip>
 
-3. File Integrity Monitoring (FIM)
+**3. File Integrity Monitoring (FIM)**
 
 Suspicious files were created, modified, permission-changed, and deleted on the Ubuntu victim machine.
 
@@ -105,7 +105,7 @@ echo "malicious test" > malware.sh
 chmod +x malware.sh
 rm malware.sh
 
-Wazuh successfully detected:
+**Wazuh successfully detected:**
 
 File creation
 File deletion
@@ -132,7 +132,7 @@ Security event analysis
 SOC operations workflow
 Screenshots
 
-The screenshots directory contains:
+**The screenshots directory contains:**
 
 AWS EC2 deployment
 Security group configuration
@@ -144,7 +144,7 @@ Wazuh agent installation
 Nmap reconnaissance activity
 Future Improvements
 
-Potential future enhancements:
+**Potential future enhancements:**
 
 Suricata IDS integration
 Automated incident response
@@ -153,7 +153,7 @@ Multi-endpoint monitoring
 Custom Wazuh rules
 Active response blocking
 
-Author:
+**Author:**
 Sachin Kumar
 Master of Cyber Security
 Deakin University
